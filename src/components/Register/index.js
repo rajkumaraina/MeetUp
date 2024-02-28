@@ -77,7 +77,10 @@ class Register extends Component {
             if (nameElement !== '') {
               const {history} = this.props
               history.replace('/')
-              this.setState({name: '', course: topicsList[0].displayText})
+              this.setState({
+                nameElement: '',
+                courseElement: topicsList[0].displayText,
+              })
             } else {
               this.setState({error: true})
             }

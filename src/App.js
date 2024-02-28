@@ -10,6 +10,8 @@ import Home from './components/Home'
 
 import Register from './components/Register'
 
+import NotFound from './components/NotFound'
+
 // These are the lists used in the application. You can move them to any component needed.
 
 class App extends Component {
@@ -43,6 +45,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/register" component={Register} />
+          <Route component={NotFound} />
         </Switch>
       </MeetUpContext.Provider>
     )
