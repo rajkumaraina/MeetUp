@@ -2,7 +2,7 @@ import React from 'react'
 
 const MeetUpContext = React.createContext({
   name: '',
-  course: '',
+  course: 'ARTS_AND_CULTURE',
   registered: false,
   nameChange: () => {},
   courseChange: () => {},

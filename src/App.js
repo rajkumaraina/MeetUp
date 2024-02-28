@@ -26,7 +26,7 @@ class App extends Component {
   }
 
   registerChange = () => {
-    this.setState(prevState => ({register: !prevState.register}))
+    this.setState({register: true})
   }
 
   render() {
@@ -46,6 +46,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/register" component={Register} />
           <Route component={NotFound} />
+          <Redirect to="/not-found" />
         </Switch>
       </MeetUpContext.Provider>
     )

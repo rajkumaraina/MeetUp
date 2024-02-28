@@ -44,7 +44,7 @@ const topicsList = [
 const Option = props => {
   const {item} = props
   const {id, displayText} = item
-  return <option value={displayText}>{displayText}</option>
+  return <option value={id}>{displayText}</option>
 }
 
 class Register extends Component {
@@ -67,7 +67,10 @@ class Register extends Component {
           }
 
           const selectedOption = event => {
-            courseChange(event.target.value)
+            this.setState({courseElement: event.target.value})
+            const item = topicsList.find(each => each.id === event.target.value)
+
+            courseChange(item.displayText)
           }
 
           const submitClicked = event => {
@@ -109,7 +112,7 @@ class Register extends Component {
                       placeholder="Your name"
                       onChange={nameInput}
                     />
-                    <Label htmlFor="topic">Topics</Label>
+                    <Label htmlFor="topic">TOPICS</Label>
                     <Select
                       onChange={selectedOption}
                       id="topic"

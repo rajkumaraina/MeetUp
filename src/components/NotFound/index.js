@@ -3,7 +3,7 @@ import './index.css'
 const NotFound = () => (
   <div className="notFound">
     <img
-      src="https://assets.ccbp.in/frontend/react-js/ebank-not-found-img.png"
+      src="https://assets.ccbp.in/frontend/react-js/meetup/not-found-img.png"
       alt="not found"
       className="notfoundImg"
     />

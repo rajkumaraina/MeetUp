@@ -1,5 +1,7 @@
 import {Component} from 'react'
 
+import {Link} from 'react-router-dom'
+
 import MeetUpContext from '../../Context/meetupContext'
 
 import {
@@ -47,10 +49,12 @@ class Home extends Component {
                 ) : (
                   <Para>Please register for the topic</Para>
                 )}
+                <Link to="/register" className="linkElement">
+                  <Button type="button" onClick={this.registerClicked}>
+                    Register
+                  </Button>
+                </Link>
 
-                <Button type="button" onClick={this.registerClicked}>
-                  Register
-                </Button>
                 <Image
                   src="https://assets.ccbp.in/frontend/react-js/meetup/meetup-img.png"
                   alt="meetup"
